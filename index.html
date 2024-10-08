@@ -1,63 +1,197 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dictionary</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Dictionary</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              About
-            </a>
-            <ul class="About">
+<style>
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    text-align: center;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .logo:hover {
+    color: #4CAF50;
+  }
+  
+  .navbar {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #85B09A;
+  }
+  
+  .navbar li {
+    margin-right: 20px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+    font-weight: bold;
+  }
+  
+  
+  .navbar a:hover {
+    color: #4CAF50;
+  }
+  
+  .definition-heading {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .search-form {
+    display: flex;
+    margin-bottom: 20px;
+   
+  }
+  
+  .search-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    transition: border-color 0.3s ease-in-out;
+    border: 2px solid #ccc;
+  }
+  
+ 
+  
+  .search-form input:focus {
+    border-color: #4CAF50;
+  }
+  
+  .search-form button {
+    padding: 10px 15px;
+    background-color: #0000FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    padding: 12px 20px;
+  }
+  
+  .search-form button:hover {
+    background-color: #3e8e41;
+  }
+  
+  .definition-container {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    text-align: center;
+    background-color: #F8F8FF;
+  }
+  
+  .definition-container:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  #word-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  #definition {
+    font-size: 18px;
+    color: #666;
+  }
+ 
+ 
+  .logo-image {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+ 
+  .definition-heading {
+    color: #333;
+  }
+  
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    /* background-color: #fff; */
+  }
+  
+  .logo-image {
+    margin: 0 auto; 
+  }
+  
+  .search-form {
+    display: flex;
+    justify-content: center;
+  }
+  
+  
 
-            </ul>
-          </li>
+  #hd{
+    background-color: #F5FFFA;
+  }
+  </style>
 
-        </ul>
-        <form class="d-flex my-form" role="search">
-          <input class="form-control me-2" id="searchTxt" name="searchTxt" type="search" placeholder="Search"
-            aria-label="Search">
-          <button class="btn btn-outline-success" type="submit" id="searchbtn">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav>
-  <div class="px-4 py-5 my-5 text-center">
-    <img class="d-block mx-auto mb-4"
-      src="https://camo.githubusercontent.com/d2e4e9d84efab6d00317c72d3269e064a97eaf42a8fd9ad0d0b924fab2f44954/68747470733a2f2f63646e2e7261776769742e636f6d2f64616e6b6c616d6d65722f6279746573697a652d69636f6e732f6d61737465722f646973742f69636f6e732f626f6f6b2e737667"
-      alt="" width="72" height="57">
-    <h1 class="display-5 fw-bold text-body-emphasis"><span id="wordheading">Your word will appear here!</span></h1>
-    <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4"><span id="definition">Welcome to the Dictionary App, type your favorite word on the search
-          bar at the top and you will see the meanings here!</span></p>
-      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <button type="button" class="btn btn-primary btn-lg px-4 gap-3" fdprocessedid="sl2py7">Talk To Author</button>
-        <button type="button" class="btn btn-outline-secondary btn-lg px-4" fdprocessedid="v7f5tt">Clear Record</button>
-      </div>
-    </div>
-  </div>
+    <header id="hd">
+        <div class="container">
+          <h1 class="logo">Dictionary</h1>
+          <!-- <img src="dictionary-icon.png" alt="Dictionary Icon" class="logo-image"> -->
+          <form class="search-form">
+            <input type="text" id="search-input" placeholder="search for word">
+            <button type="submit">Search</button>
+          </form>
+        </div>
+      </header>
+    
+      <main>
+        <div class="container">
+          <h2 class="definition-heading">Definition</h2>
+          <div class="definition-container">
+            <h3 id="word-heading"></h3>
+            <p id="definition"></p>
+          </div>
+        </div>
+      </main>
+    
+      <footer>
+        <!-- <p>&copy; 2023 Your Dictionary</p> -->
+      </footer>
+    
 
-  <div id="myData" style="margin-left: 40px; margin-right: 40px;"></div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
-  <script src="script.js"></script>
+  <script src="d.js"></script>
 </body>
 
 </html>
