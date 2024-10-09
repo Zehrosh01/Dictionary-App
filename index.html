@@ -25,6 +25,17 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   
+/*   
+  .logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .logo:hover {
+    color: #4CAF50;
+  } */
   
   .navbar {
     display: flex;
@@ -152,11 +163,48 @@ body {
   #hd{
     background-color: #F5FFFA;
   }
+
+
+/* adding media query for responsiveness */
+@media screen and (max-width: 768px) {
+
+  h1, h2 {
+    font-size: 24px;
+  }
+
+ 
+  .search-form input {
+    width: 180px;
+  }
+
+
+  .definition-container {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+
+  h1, h2 {
+    font-size: 20px;
+  }
+
+
+  .search-form input {
+    width: 150px;
+  }
+
+  
+  .definition-container {
+    padding: 10px;
+  }
+}
   </style>
 
     <header id="hd">
         <div class="container">
           <h1 class="logo">Dictionary</h1>
+          <!-- <img src="dictionary-icon.png" alt="Dictionary Icon" class="logo-image"> -->
           <form class="search-form">
             <input type="text" id="search-input" placeholder="search for word">
             <button type="submit">Search</button>
@@ -175,6 +223,7 @@ body {
       </main>
     
       <footer>
+        <!-- <p>&copy; 2023 Your Dictionary</p> -->
       </footer>
     
 
